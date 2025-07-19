@@ -12,7 +12,6 @@ document.getElementById('btn').addEventListener('click', () => {
   }
 });
 
-// 阻止关闭或刷新页面（除非已同意）
 window.addEventListener("beforeunload", function (e) {
   if (!agreed) {
     e.preventDefault();
