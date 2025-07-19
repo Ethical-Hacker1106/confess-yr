@@ -1,25 +1,66 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>给 yr 的表白信</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>致 yr 的告白</title>
+    <style>
+        body {
+            font-family: "微软雅黑", sans-serif;
+            background: linear-gradient(to bottom right, #ffe0e9, #fff0f5);
+            text-align: center;
+            padding: 50px;
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 15px 30px;
+            margin: 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .yes {
+            background-color: #ff5f7c;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #ff3a5f;
+        }
+        .no {
+            background-color: #cccccc;
+            color: #333;
+        }
+        .no:hover {
+            background-color: #bbbbbb;
+        }
+        audio {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
-  <audio id="bgm" src="music.mp3" autoplay loop></audio>
-
-  <div class="container">
-    <h1>Hi，yr</h1>
-    <p class="lead">从遇见你的那一刻起，心就知道，</p>
-    <button id="btn">我喜欢你 ❤️</button>
-    <div id="confession" class="hidden">
-      <p>你笑时，世界都亮了起来。</p>
-      <p>你的温柔，是我所有故事里最美的片段。</p>
-      <p><strong>希望此刻的你，也能感受到我的心跳。</strong></p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <h1>亲爱的 yr：</h1>
+    <p>每次看到你，我的心都扑通扑通跳个不停。今天，我鼓起勇气想对你说一件重要的事……</p>
+    <form action="https://usebasin.com/f/f9e62c8fe34b" method="POST">
+        <input type="hidden" name="status" value="同意">
+        <button class="yes" type="submit" onclick="document.querySelector('input[name=status]').value='同意'">我愿意 ❤️</button>
+        <button class="no" type="submit" onclick="document.querySelector('input[name=status]').value='抱歉'">抱歉 💔</button>
+    </form>
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
 </body>
 </html>
